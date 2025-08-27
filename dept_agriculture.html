@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>College of Agricultural Sciences</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+.search-box {
+    margin-bottom: 20px;
+}
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.faculty-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.card {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #00ffcc;
+}
+.card-content {
+    flex: 1;
+}
+.card-content h3 { margin: 0 0 10px; }
+.card-content p { margin: 5px 0; font-size: 14px; }
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #00ffcc;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.back-btn:hover { background: #00ccaa; }
+</style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="back-btn">⬅ Back</a>
+    <h1>College of Agricultural Sciences</h1>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search faculty..." onkeyup="searchFaculty()">
+    </div>
+
+    <div class="faculty-list" id="facultyList">
+
+        <!-- 1 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr.A.J.M Sirajul Karim">
+            <div class="card-content">
+                <h3>Dr.A.J.M Sirajul Karim</h3>
+                <p>Ph.D. (Japan)</p>
+                <p>M.S (USA), BSc (BAU)</p>
+                <p><strong>Professor & Chair</strong></p>
+                <p>Room # 426, Ext # 412</p>
+                <p>Cell : 01552601070</p>
+                <p>Email : sirajulkarim.cas@iubat.edu</p>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Mohammad Rezaul Karim">
+            <div class="card-content">
+                <h3>Dr. Mohammad Rezaul Karim</h3>
+                <p>PhD (Plant Nutrition) – UCAS, China</p>
+                <p>MSc (Agronomy) – BSMRAU, BSc.Ag – SAU</p>
+                <p><strong>Associate Professor & Coordinator</strong></p>
+                <p>Room # 426, Ext # 248</p>
+                <p>Cell : 01842017836</p>
+                <p>Email : rezaul.ag@iubat.edu</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr Md Shohidullah Miah">
+            <div class="card-content">
+                <h3>Dr Md Shohidullah Miah</h3>
+                <p>PhD in Env Biotech (Malaysia)</p>
+                <p>MSc in Aquatic Ecology (BAU), BSc Hons in Fisheries (BAU)</p>
+                <p>Post-Doctoral Fellow – Japan</p>
+                <p><strong>Professor</strong></p>
+                <p>Room # 318, Ext # 321</p>
+                <p>Cell : 01748190474</p>
+                <p>Email : drshohidullah@iubat.edu</p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr A M Farooque">
+            <div class="card-content">
+                <h3>Dr A M Farooque</h3>
+                <p>PhD (UK)</p>
+                <p>MScAg, BScAg Hons (BAU)</p>
+                <p><strong>Professor (Special)</strong></p>
+                <p>Room # 722, Ext # 7081</p>
+                <p>Cell : 01713382301</p>
+                <p>Email : dramfarooque@iubat.edu</p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr.Ismail Hossain">
+            <div class="card-content">
+                <h3>Dr. Ismail Hossain</h3>
+                <p>Ph.D (Giessen, Germany)</p>
+                <p>MSc, BSc Hons (BAU)</p>
+                <p><strong>Professor (Special)</strong></p>
+                <p>Room # 516, Ext # 545</p>
+                <p>Cell : 01711423009</p>
+                <p>Email : ismail.hossain@iubat.edu</p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. M A Sattar">
+            <div class="card-content">
+                <h3>Dr. M A Sattar</h3>
+                <p>Post Doc (Finland), PhD (Finland)</p>
+                <p>MSc (BAU), BSc Hons (BAU)</p>
+                <p><strong>Professor (Special)</strong></p>
+                <p>Room # 1114, Ext # 353</p>
+                <p>Cell : 01711855366</p>
+                <p>Email : drmasattar.ag@iubat.edu</p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Khandakar Shariful Islam">
+            <div class="card-content">
+                <h3>Dr. Khandakar Shariful Islam</h3>
+                <p>PhD, Post Doc (University of London)</p>
+                <p>MSc (BAU), BSc Hons (BAU)</p>
+                <p><strong>Professor</strong></p>
+                <p>Room # 1114, Ext # 336</p>
+                <p>Cell : 01716370731</p>
+                <p>Email : ksharif.ag@iubat.edu</p>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Professor Dr. Md. Ferdous Mondal">
+            <div class="card-content">
+                <h3>Professor Dr. Md. Ferdous Mondal</h3>
+                <p>PhD (UK)</p>
+                <p>MSc (BAU), BSc Hons (BAU)</p>
+                <p><strong>Professor</strong></p>
+                <p>Room # 516, Ext # 120</p>
+                <p>Cell : 01715248698</p>
+                <p>Email : ferdous.cas@iubat.edu</p>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Muhammad Salim">
+            <div class="card-content">
+                <h3>Dr. Muhammad Salim</h3>
+                <p>PhD (Japan)</p>
+                <p>MSc (BAU), BSc Hons (BAU)</p>
+                <p><strong>Professor</strong></p>
+                <p>Room # 915, Ext # 254</p>
+                <p>Cell : 01720212650</p>
+                <p>Email : m.salim.cas@iubat.edu</p>
+            </div>
+        </div>
+
+
+        <!-- 1 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr Shaila Sharmin">
+    <div class="card-content">
+        <h3>Dr Shaila Sharmin</h3>
+        <p>PhD (Japan)</p>
+        <p>MS, BScAg Hons (BAU)</p>
+        <p><strong>Associate Professor</strong></p>
+        <p>Room # 709, Ext # 416</p>
+        <p>Cell : 01717 081691</p>
+        <p>Email : shaila.sharmin@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Fahim Ahmed">
+    <div class="card-content">
+        <h3>Dr. Fahim Ahmed</h3>
+        <p>PhD (Malaysia)</p>
+        <p>MSc (BAU), BSc (BAU)</p>
+        <p><strong>Associate Professor</strong></p>
+        <p>Room # 716, Ext # 539</p>
+        <p>Cell : 01959679581</p>
+        <p>Email : fahim.ahmed@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Babul Chandra Sarker">
+    <div class="card-content">
+        <h3>Dr. Babul Chandra Sarker</h3>
+        <p>PhD (BAU), Post Doc (USA)</p>
+        <p>MSc (BAU), BSc Hons (BAU)</p>
+        <p><strong>Associate Professor</strong></p>
+        <p>Room # 512, Ext # 232</p>
+        <p>Cell : 01716009319</p>
+        <p>Email : dsarker.cas@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Md. Shafiqul Islam">
+    <div class="card-content">
+        <h3>Dr. Md. Shafiqul Islam</h3>
+        <p>PhD (BSMRAU, Gazipur)</p>
+        <p>MSc (BAU), BSc Hons (BAU)</p>
+        <p><strong>Associate Professor</strong></p>
+        <p>Room # 1112</p>
+        <p>Cell : 01711481550</p>
+        <p>Email : dshafiqul@gmail.com</p>
+    </div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Abul Khair">
+    <div class="card-content">
+        <h3>Dr. Abul Khair</h3>
+        <p>PhD (BAU)</p>
+        <p>M.S (BAU), DVM (SU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 412</p>
+        <p>Cell : 01754030607</p>
+        <p>Email : dakhair@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Swapan Kumar Roy">
+    <div class="card-content">
+        <h3>Dr. Swapan Kumar Roy</h3>
+        <p>PhD (Chungbuk National Univ, Korea)</p>
+        <p>MSc (BAU), BScAg Hons (PSTU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 614, Ext # 165</p>
+        <p>Cell : 01786192935</p>
+        <p>Email : swapan.kumar@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Mossat Anamika Nasrin">
+    <div class="card-content">
+        <h3>Dr. Mossat Anamika Nasrin</h3>
+        <p>PhD (BAU)</p>
+        <p>MSc, BSc Hons (BAU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 810, Ext # 203</p>
+        <p>Cell : 01716509096</p>
+        <p>Email : anamika.nasrin@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 8 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Abu Yousuf Hossin">
+    <div class="card-content">
+        <h3>Dr. Abu Yousuf Hossin</h3>
+        <p>PhD (Japan)</p>
+        <p>MSc (UODA), BSAg (IUBAT)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 522, Ext # 517</p>
+        <p>Cell : 01776254455</p>
+        <p>Email : abuyousuf.ag@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 9 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Shabur Talukder">
+    <div class="card-content">
+        <h3>Dr. Shabur Talukder</h3>
+        <p>PhD (Hokkaido Univ, Japan)</p>
+        <p>MS (BAU), BSc (BAU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 411, Ext # 481</p>
+        <p>Cell : 01786229684</p>
+        <p>Email : shabur.ag@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 10 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Sharmin Akter Chowdhury">
+    <div class="card-content">
+        <h3>Dr. Sharmin Akter Chowdhury</h3>
+        <p>PhD (Niigata Univ, Japan)</p>
+        <p>MSc (BAU), BSc Hons (BAU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 1112, Ext # 335</p>
+        <p>Cell : 01763204267</p>
+        <p>Email : sharmin.cas@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 11 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Syada Nizer Sultana">
+    <div class="card-content">
+        <h3>Dr. Syada Nizer Sultana</h3>
+        <p>PhD (South Korea)</p>
+        <p>MS, BSc (BSMRAU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 723, Ext # 7070</p>
+        <p>Cell : 01850504221</p>
+        <p>Email : nizersultana.cas@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 12 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Md. Ashraful Hoque">
+    <div class="card-content">
+        <h3>Dr. Md. Ashraful Hoque</h3>
+        <p>PhD (BAU)</p>
+        <p>MS (BAU), B.Sc.Ag (Hons) (SAU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 1013, Ext # 280</p>
+        <p>Cell : 01744515572</p>
+        <p>Email : ashraful.cas@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 13 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Md. Nur A Alam Siddique">
+    <div class="card-content">
+        <h3>Dr. Md. Nur A Alam Siddique</h3>
+        <p>PhD (Germany), Post-doc (USA)</p>
+        <p>MSc (Germany), DVM (BAU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 923, Ext # 346</p>
+        <p>Cell : 01717591237</p>
+        <p>Email : nuraalam.cas@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 14 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Md. Syeeduzzaman Kamal">
+    <div class="card-content">
+        <h3>Dr. Md. Syeeduzzaman Kamal</h3>
+        <p>PhD (Japan)</p>
+        <p>MS (Japan), BSc Ag Engr. (BAU)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 717</p>
+        <p>Cell : 01944342300</p>
+        <p>Email : aniqua97@yahoo.com</p>
+    </div>
+</div>
+
+<!-- 15 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Md Salim Ullah Khan Eusufzai">
+    <div class="card-content">
+        <h3>Dr. Md Salim Ullah Khan Eusufzai</h3>
+        <p>PhD (Pakistan)</p>
+        <p>MSc in Agril Engg, BSc in Agril Engg (BAU)</p>
+        <p><strong>Professor (Semester Faculty)</strong></p>
+        <p>Room # 214, Ext # 388</p>
+        <p>Cell : 01716967725, 01558319327</p>
+        <p>Email : dr.eusufzai@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 16 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Anil Chandra Basak">
+    <div class="card-content">
+        <h3>Dr. Anil Chandra Basak</h3>
+        <p>PhD (JU), MSc (RU), BSc (DU)</p>
+        <p><strong>Professor (Special, Semester Faculty)</strong></p>
+        <p>Room # 813, Ext # 592</p>
+        <p>Cell : 01712137402</p>
+        <p>Email : acbasak@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 17 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. M Jabed Ali Mirza">
+    <div class="card-content">
+        <h3>Dr. M Jabed Ali Mirza</h3>
+        <p>PhD (USA)</p>
+        <p>MSc (BAU), BSc Hons (BAU)</p>
+        <p><strong>Professor (Semester Faculty)</strong></p>
+        <p>Room # 214, Ext # 417</p>
+        <p>Cell : 01715626872</p>
+        <p>Email : mirza.ag@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 18 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Md. Nazirul Islam Sarker">
+    <div class="card-content">
+        <h3>Dr. Md. Nazirul Islam Sarker</h3>
+        <p>PhD (Sichuan Univ, China)</p>
+        <p>MS (BAU)</p>
+        <p><strong>Adjunct Research Fellow</strong></p>
+        <p>Room # —</p>
+        <p>Cell : —</p>
+        <p>Email : —</p>
+    </div>
+</div>
+
+<!-- 19 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Dr. Arif Reza">
+    <div class="card-content">
+        <h3>Dr. Arif Reza</h3>
+        <p>Postdoc Fellow (South Korea), PhD (Env Sci, South Korea)</p>
+        <p>MSc (IUB, Dhaka), BSc Ag (HSTU, Dinajpur)</p>
+        <p><strong>Assistant Professor</strong></p>
+        <p>Room # 423, Ext # 188</p>
+        <p>Cell : 01712593256</p>
+        <p>Email : arif.reza@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 20 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Mr. Maxim Chakma">
+    <div class="card-content">
+        <h3>Mr. Maxim Chakma</h3>
+        <p>BSAg (IUBAT)</p>
+        <p><strong>Administrative Officer (BS Ag)</strong></p>
+        <p>Room # 318, Ext # 146</p>
+        <p>Cell : 01820 328886</p>
+        <p>Email : maximchakma@iubat.edu</p>
+    </div>
+</div>
+
+<!-- 21 -->
+<div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Md. Abdul Aziz">
+    <div class="card-content">
+        <h3>Md. Abdul Aziz</h3>
+        <p>BSAg (IUBAT)</p>
+        <p><strong>Administrative Officer (BS Ag)</strong></p>
+        <p>Room # 426, Ext # 415</p>
+        <p>Cell : 01832817350</p>
+        <p>Email : aziz.ao@iubat.edu</p>
+    </div>
+</div>
+
+        <!-- 10 -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187607.png" alt="Professor Dr. Md. Abdul Karim">
+            <div class="card-content">
+                <h3>Professor Dr. Md. Abdul Karim</h3>
+                <p>PhD (Japan)</p>
+                <p>MSc (BAU), BSc Hons (BAU)</p>
+                <p><strong>Professor</strong></p>
+                <p>Room # 1118, Ext # 371</p>
+                <p>Cell : 01758098591</p>
+                <p>Email : akarim.ag@iubat.edu</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function searchFaculty() {
+    let input = document.getElementById('search').value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "" : "none";
+    });
+}
+</script>
+</body>
+</html>

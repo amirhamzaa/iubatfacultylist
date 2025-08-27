@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CSC Department</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+.search-box {
+    margin-bottom: 20px;
+}
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.faculty-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.card {
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+.card h3 { margin: 0 0 10px; }
+.card p { margin: 5px 0; font-size: 14px; }
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #00ffcc;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.back-btn:hover { background: #00ccaa; }
+</style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="back-btn">⬅ Back</a>
+    <h1>Computer Science and Engineering</h1>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search faculty..." onkeyup="searchFaculty()">
+    </div>
+    <div class="faculty-list" id="facultyList">
+        <div class="card">
+            <h3>Dr Utpal Kanti Das</h3>
+            <p>PhD (JU), MSc in Info Tech (India), BSc in Comp Sc (India)</p>
+            <p>Professor & Chair</p>
+            <p>Email: ukd@iubat.edu</p>
+            <p>Phone: 01819199419</p>
+            <p>Room: 420, Ext: 419</p>
+        </div>
+        <div class="card">
+            <h3>Dr Abhijit Saha</h3>
+            <p>PhD in Comp Sc & Stat (Korea), MS in Comp Sc & Stat (Korea), BSc (AUB, Dhaka), Post-Doctoral Fellow (South Korea)</p>
+            <p>Professor & Coordinator of Master's Program</p>
+            <p>Email: asaha@iubat.edu</p>
+            <p>Phone: 01711201907</p>
+            <p>Room: 614, Ext: 615</p>
+        </div>
+        <div class="card">
+            <h3>Rashedul Islam</h3>
+            <p>MSc (DUET), BCSE (IUBAT)</p>
+            <p>Associate Professor & Coordinator</p>
+            <p>Email: rashed@iubat.edu</p>
+            <p>Phone: 01776445218</p>
+            <p>Room: 420, Ext: 418</p>
+        </div>
+        <div class="card">
+            <h3>Shahinur Alam</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Assistant Professor & Coordinator</p>
+            <p>Email: shaheen@iubat.edu</p>
+            <p>Phone: 01716950721</p>
+            <p>Room: 420, Ext: 418</p>
+        </div>
+        <div class="card">
+            <h3>Prof. Dr Ehteshamul Haque</h3>
+            <p>PhD (USSR), MSc (USSR)</p>
+            <p>Professor</p>
+            <p>Email: ehaquebd@iubat.edu</p>
+            <p>Phone: 01715959752</p>
+            <p>Room: 217, Ext: 126</p>
+        </div>
+        <div class="card">
+            <h3>Drs. Md Alamgir Bhuiyan</h3>
+            <p>MSc in Computer Science (JU), BCSE (IUBAT)</p>
+            <p>Associate Professor</p>
+            <p>Email: alamgir@iubat.edu</p>
+            <p>Phone: 01716247889</p>
+            <p>Room: 1209, Ext: 7099, 7085</p>
+        </div>
+        <div class="card">
+            <h3>Dr. Ishtiak Al Mamoon</h3>
+            <p>PhD (Malaysia), MSc (IUB), BSc (IUB)</p>
+            <p>Associate Professor</p>
+            <p>Email: ishtiak.cse@iubat.edu</p>
+            <p>Phone: 01713229860</p>
+            <p>Room: 1017, Ext: 310</p>
+        </div>
+        <div class="card">
+            <h3>Dr. Md. Abdul Awal</h3>
+            <p>PhD (IU, Kushtia), MS (UITS), BSc (AIUB)</p>
+            <p>Associate Professor</p>
+            <p>Email: abdul.awal@iubat.edu</p>
+            <p>Phone: 01714049454</p>
+            <p>Room: 1017, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Krishna Das</h3>
+            <p>MSc in Enterprise Software Engg (UK), BCS (Pune, India), Professional Diploma in Business Management & Marketing (London, UK)</p>
+            <p>Associate Professor</p>
+            <p>Email: krishna.das@iubat.edu</p>
+            <p>Phone: 01553543733</p>
+            <p>Room: 514, Ext: 503</p>
+        </div>
+        <div class="card">
+            <h3>Arifa Tur Rahman</h3>
+            <p>MSc (JU), BCSE (IUBAT)</p>
+            <p>Associate Professor</p>
+            <p>Email: arifarahman@iubat.edu</p>
+            <p>Phone: 01718891405</p>
+            <p>Room: 1014, Ext: 295</p>
+        </div>
+        <div class="card">
+            <h3>Md Alomgir Hossain</h3>
+            <p>MSc in CSE (JU), BCSE (IUBAT)</p>
+            <p>Associate Professor</p>
+            <p>Email: alomgir.hossain@iubat.edu</p>
+            <p>Phone: 01718735128</p>
+            <p>Room: 514, Ext: 504</p>
+        </div>
+        <div class="card">
+            <h3>Drs Ferdaus Anam Jibon</h3>
+            <p>PhD Contd. (DUET), MSc (DUET), BSc Hons (JKKNIU)</p>
+            <p>Associate Professor</p>
+            <p>Email: jibon.cse@iubat.edu</p>
+            <p>Phone: 01770013144</p>
+            <p>Room: 1115, Ext: 382</p>
+        </div>
+        <div class="card">
+            <h3>Md Saidur Rahman</h3>
+            <p>MSc (EWU, Dhaka), BCSE (IUBAT)</p>
+            <p>Assistant Professor</p>
+            <p>Email: s.rahman@iubat.edu</p>
+            <p>Phone: 01646322666</p>
+            <p>Room: 511, Ext: 226</p>
+        </div>
+        <div class="card">
+            <h3>Rubayea Ferdows</h3>
+            <p>MSc (IUT), BCSE (IUBAT)</p>
+            <p>Assistant Professor</p>
+            <p>Email: rubayea@iubat.edu</p>
+            <p>Phone: 01677066697</p>
+            <p>Room: 715, Ext: 819</p>
+        </div>
+        <div class="card">
+            <h3>M M Rakibul Hasan</h3>
+            <p>MBA in MIS (DU), BCSE (IUBAT)</p>
+            <p>Assistant Professor</p>
+            <p>Email: hasan.rakib@iubat.edu</p>
+            <p>Phone: 01925936603</p>
+            <p>Room: 718, Ext: 181</p>
+        </div>
+        <div class="card">
+            <h3>Toyeer-E-Ferdoush</h3>
+            <p>PhD Contd., MSc Engg in ISS (MIST), B.Sc (IUBAT)</p>
+            <p>Assistant Professor</p>
+            <p>Email: toyeer@iubat.edu</p>
+            <p>Phone: 01743836567</p>
+            <p>Room: 714, Ext: 446</p>
+        </div>
+        <div class="card">
+            <h3>Dr. Md. Golam Morshed</h3>
+            <p>PhD Kyung Hee University (South Korea), MSc (China), MSc in Comp Sc (JU), BCSE (IUBAT)</p>
+            <p>Assistant Professor</p>
+            <p>Email: morshed@iubat.edu</p>
+            <p>Phone: 01722429393</p>
+            <p>Room: 717, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Faisal Imran</h3>
+            <p>PhD Contd. (JnU), MSc (RUET), BSc Hons (RUET)</p>
+            <p>Assistant Professor</p>
+            <p>Email: faisal.cse@iubat.edu</p>
+            <p>Phone: 01917326076</p>
+            <p>Room: 409, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Tanzina Tasnim Bithi</h3>
+            <p>B.Sc (JU)</p>
+            <p>Assistant Professor</p>
+            <p>Email: tanzina_cse@iubat.edu</p>
+            <p>Phone: 01754476144</p>
+            <p>Room: 715, Ext: 826</p>
+        </div>
+        <div class="card">
+            <h3>Suhala Lamia</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Assistant Professor</p>
+            <p>Email: suhalalamia@iubat.edu</p>
+            <p>Phone: 001931235286</p>
+            <p>Room: 1014, Ext: 293</p>
+        </div>
+        <div class="card">
+            <h3>Md. Alamin Talukder</h3>
+            <p>MSc in CSE (JnU), BSc in CSE (JnU)</p>
+            <p>Assistant Professor</p>
+            <p>Email: alamin.cse@iubat.edu</p>
+            <p>Phone: 01330997311</p>
+            <p>Room: 522, Ext: 520</p>
+        </div>
+        <div class="card">
+            <h3>Moumitu Tasnim</h3>
+            <p>BSc (JU)</p>
+            <p>Senior Lecturer</p>
+            <p>Email: moumitu.cse@iubat.edu</p>
+            <p>Phone: 01841958584</p>
+            <p>Room: 1015, Ext: 278</p>
+        </div>
+        <div class="card">
+            <h3>Engr. Md. Hasibul Islam</h3>
+            <p>BSc (IUBAT)</p>
+            <p>Senior Lecturer</p>
+            <p>Email: hasibul.cse@iubat.edu</p>
+            <p>Phone: 01765471227</p>
+            <p>Room: 812, Ext: 593</p>
+        </div>
+        <div class="card">
+            <h3>Engr. ASM Shakil Ahamed</h3>
+            <p>BSc (IUBAT)</p>
+            <p>Senior Lecturer</p>
+            <p>Email: sahamed.cse@iubat.edu</p>
+            <p>Phone: 01948922885</p>
+            <p>Room: 812, Ext: 177</p>
+        </div>
+        <div class="card">
+            <h3>Jabunnesa Jahan Sara</h3>
+            <p>BSc (IUBAT)</p>
+            <p>Senior Lecturer</p>
+            <p>Email: jabunnesa.cse@iubat.edu</p>
+            <p>Phone: 01785875969</p>
+            <p>Room: 715, Ext: 441</p>
+        </div>
+        <div class="card">
+            <h3>D.M Arif Afsar</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Senior Lecturer</p>
+            <p>Email: afsar.cse@iubat.edu</p>
+            <p>Phone: 01951105948</p>
+            <p>Room: 713, Ext: 435</p>
+        </div>
+        <div class="card">
+            <h3>Faniyam Maria Mansia</h3>
+            <p>MSc (JU), BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: maria.cse@iubat.edu</p>
+            <p>Phone: 01954432882</p>
+            <p>Room: 716, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Md. Nazir Ahmed</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: nazir.cse@iubat.edu</p>
+            <p>Phone: 01827156543</p>
+            <p>Room: 812, Ext: 885</p>
+        </div>
+        <div class="card">
+            <h3>Md. Asif Hossain</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: asif.cse@iubat.edu</p>
+            <p>Phone: 01859285784</p>
+            <p>Room: 815, Ext: 817</p>
+        </div>
+        <div class="card">
+            <h3>Mahedi Hasan</h3>
+            <p>BSc (CUET)</p>
+            <p>Lecturer</p>
+            <p>Email: mahedi.cse@iubat.edu</p>
+            <p>Phone: 01705054376</p>
+            <p>Room: 812, Ext: 811</p>
+        </div>
+        <div class="card">
+            <h3>Suzad Mohammad</h3>
+            <p>BSc (IUT)</p>
+            <p>Lecturer</p>
+            <p>Email: suzad.cse@iubat.edu</p>
+            <p>Phone: 8801875350975</p>
+            <p>Room: 1012, Ext: 273</p>
+        </div>
+        <div class="card">
+            <h3>Snaholata Mondal</h3>
+            <p>BSc (CUET)</p>
+            <p>Lecturer</p>
+            <p>Email: snaholata.cse@iubat.edu</p>
+            <p>Phone: 01535776436</p>
+            <p>Room: 1013, Ext: 272</p>
+        </div>
+        <div class="card">
+            <h3>Jubair Ahmed Nabin</h3>
+            <p>BSc (CUET)</p>
+            <p>Lecturer</p>
+            <p>Email: jahmed.cse@iubat.edu</p>
+            <p>Phone: 01984702077</p>
+            <p>Room: 813, Ext: 812</p>
+        </div>
+        <div class="card">
+            <h3>Jannatul Ferdous</h3>
+            <p>BSc Hons (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: jannatul.cse@iubat.edu</p>
+            <p>Phone: 01307713087</p>
+            <p>Room: 811, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Naeem Mia</h3>
+            <p>BSc (KUET)</p>
+            <p>Lecturer</p>
+            <p>Email: naeem.cse@iubat.edu</p>
+            <p>Phone: 01791796640</p>
+            <p>Room: 813, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Afsana Akter Lija</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: afsanalija.cse@iubat.edu</p>
+            <p>Phone: 01628343047</p>
+            <p>Room: 723, Ext: 7078</p>
+        </div>
+        <div class="card">
+            <h3>Dipta Mohon Das</h3>
+            <p>BSc (KUET)</p>
+            <p>Lecturer</p>
+            <p>Email: dipta.cse@iubat.edu</p>
+            <p>Phone: 01986300292</p>
+            <p>Room: 921, Ext: 253</p>
+        </div>
+        <div class="card">
+            <h3>Kashfi Shormita Kushal</h3>
+            <p>MSc (JnU), BSc (JnU)</p>
+            <p>Lecturer</p>
+            <p>Email: kashfishormita.cse@iubat.edu</p>
+            <p>Phone: 01627299790</p>
+            <p>Room: 1012, Ext: 259</p>
+        </div>
+        <div class="card">
+            <h3>Fahim Shakil Tamim</h3>
+            <p>BSc (CUET)</p>
+            <p>Lecturer</p>
+            <p>Email: fahim.cse@iubat.edu</p>
+            <p>Phone: 01689648688</p>
+            <p>Room: 810, Ext: 452</p>
+        </div>
+        <div class="card">
+            <h3>Abdullah Mohammad Sakib</h3>
+            <p>BSc (UAP)</p>
+            <p>Lecturer</p>
+            <p>Email: sakib.cse@iubat.edu</p>
+            <p>Phone: 01624341064</p>
+            <p>Room: 921, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Puja Dey</h3>
+            <p>BSc (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: puja.cse@iubat.edu</p>
+            <p>Phone: 01724479576</p>
+            <p>Room: 1015, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Md. Masud Rana</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: masud.cse@iubat.edu</p>
+            <p>Phone: 01580590846</p>
+            <p>Room: 1116, Ext: 360</p>
+        </div>
+        <div class="card">
+            <h3>Anamika Rani Nath</h3>
+            <p>BSc (CUET)</p>
+            <p>Lecturer</p>
+            <p>Email: anamikanath.cse@iubat.edu</p>
+            <p>Phone: 01720228973</p>
+            <p>Room: 1016, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Rafiqul Islam Munna</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: munna.cse@iubat.edu</p>
+            <p>Phone: 01581102565</p>
+            <p>Room: 1016, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Kazi Johir Raihan Suny</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: suny.cse@iubat.edu</p>
+            <p>Phone: 01538133464</p>
+            <p>Room: 1016, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Sheekar Banerjee</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: sheekar.cse@iubat.edu</p>
+            <p>Phone: 01760208590</p>
+            <p>Room: 917, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Md. Min Khayer</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: minkhayer.cse@iubat.edu</p>
+            <p>Phone: 01705570952</p>
+            <p>Room: 820, Ext: 825</p>
+        </div>
+        <div class="card">
+            <h3>Avijit Biswas</h3>
+            <p>MSc (BUET) Contd., BSc (BUET)</p>
+            <p>Lecturer</p>
+            <p>Email: avijit.cse@iubat.edu</p>
+            <p>Phone: 01846440053</p>
+            <p>Room: 717, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Sajia Bintea Jahangir</h3>
+            <p>BSc (JU)</p>
+            <p>Lecturer</p>
+            <p>Email: sajia.cse@iubat.edu</p>
+            <p>Phone: 01727706842</p>
+            <p>Room: 613, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>S M Rifatur Rana</h3>
+            <p>BSc (CUET)</p>
+            <p>Lecturer</p>
+            <p>Email: rifatur.cse@iubat.edu</p>
+            <p>Phone: 01581509012</p>
+            <p>Room: 512, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Shahriar Raj</h3>
+            <p>BSc in Computer Science (BUET)</p>
+            <p>Lecturer</p>
+            <p>Email: shahriar.cse@iubat.edu</p>
+            <p>Phone: 01976837633</p>
+            <p>Room: 519, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Md. Faihaj Alam Topu</h3>
+            <p>BSc in Computer Science (BUET)</p>
+            <p>Lecturer</p>
+            <p>Email: faihaj.cse@iubat.edu</p>
+            <p>Phone: 01818208888</p>
+            <p>Room: 512, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Saha Kuljit Shantanu</h3>
+            <p>BSc in Computer Science (BUET)</p>
+            <p>Lecturer</p>
+            <p>Email: shantanu.cse@iubat.edu</p>
+            <p>Phone: 01842352155</p>
+            <p>Room: 1115, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Asad Bin Shahid Mahin</h3>
+            <p>BSc in Computer Science (BUET)</p>
+            <p>Lecturer</p>
+            <p>Email: mahin.cse@iubat.edu</p>
+            <p>Phone: 01754374866</p>
+            <p>Room: 820, Ext: 883</p>
+        </div>
+        <div class="card">
+            <h3>Md. Khairul Islam</h3>
+            <p>BSc (CUET)</p>
+            <p>Lecturer</p>
+            <p>Email: rk0560005@gmail.com</p>
+            <p>Phone: 013255166591</p>
+            <p>Room: Not Provided, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Md. Sakif Alam</h3>
+            <p>BSCE (RUET)</p>
+            <p>Lecturer</p>
+            <p>Email: sakif2506@gmail.com</p>
+            <p>Phone: 01629124750</p>
+            <p>Room: Not Provided, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Momtazul Arefin Labib</h3>
+            <p>BSc (CUET)</p>
+            <p>Lecturer</p>
+            <p>Email: arefinlabibndc19@gmail.com</p>
+            <p>Phone: 01861964362</p>
+            <p>Room: Not Provided, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Dr. Sujan Chandra Roy</h3>
+            <p>PhD (Japan), MSc (RU), BSc Hons (RU)</p>
+            <p>Not Provided</p>
+            <p>Email: sujan.007.ice@gmail.com</p>
+            <p>Phone: Not Provided</p>
+            <p>Room: 916, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Mohammad Sajid Shahriar</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Senior Lecturer</p>
+            <p>Email: sajid@iubat.edu</p>
+            <p>Phone: 01674342278</p>
+            <p>Room: 420, Ext: 410</p>
+        </div>
+        <div class="card">
+            <h3>Md. Rawnak Saif Adib</h3>
+            <p>MSc (BUP), BSc (BUP)</p>
+            <p>Lecturer</p>
+            <p>Email: saifadib.cse@iubat.edu</p>
+            <p>Phone: 01551073923</p>
+            <p>Room: 514, Ext: 500</p>
+        </div>
+        <div class="card">
+            <h3>Mohammad Imtajul Bari</h3>
+            <p>BSc (MIST)</p>
+            <p>Lecturer</p>
+            <p>Email: Not Provided</p>
+            <p>Phone: Not Provided</p>
+            <p>Room: Not Provided, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Abdur Rahman</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: arahman.cse@iubat.edu</p>
+            <p>Phone: 01876052367</p>
+            <p>Room: 1113, Ext: 342</p>
+        </div>
+        <div class="card">
+            <h3>Sharmila Majumdar</h3>
+            <p>BSc in Comp Sc & Engg (SUST, Sylhet)</p>
+            <p>Lecturer</p>
+            <p>Email: sharmila@iubat.edu</p>
+            <p>Phone: 01681099577</p>
+            <p>Room: 209, Ext: 216</p>
+        </div>
+        <div class="card">
+            <h3>Tanvir Hasan</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: tanvir.cse@iubat.edu</p>
+            <p>Phone: 01706986905</p>
+            <p>Room: 1113, Ext: 352</p>
+        </div>
+        <div class="card">
+            <h3>Nusrath Tabassum</h3>
+            <p>B.Sc (CUET)</p>
+            <p>Senior Lecturer</p>
+            <p>Email: nusrathtabassum_cse@iubat.edu</p>
+            <p>Phone: 01521112365</p>
+            <p>Room: 812, Ext: 812</p>
+        </div>
+        <div class="card">
+            <h3>Anwar Hossain Efat</h3>
+            <p>BSc Hons (RUET)</p>
+            <p>Lecturer</p>
+            <p>Email: anwar.cse@iubat.edu</p>
+            <p>Phone: 01621597496</p>
+            <p>Room: 716, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Moumita Chanda</h3>
+            <p>MSc (JU), BSc Hons (JU)</p>
+            <p>Lecturer</p>
+            <p>Email: moumita.cse@iubat.edu</p>
+            <p>Phone: 01732235611</p>
+            <p>Room: 922, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Tabia Tanzin Prama</h3>
+            <p>BSc Hons (JU)</p>
+            <p>Lecturer</p>
+            <p>Email: tanzin.cse@iubat.edu</p>
+            <p>Phone: 01726419272</p>
+            <p>Room: Not Provided, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Mousumi Ahmed Mimi</h3>
+            <p>MSc (UIU), BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: mousumi_cse@iubat.edu</p>
+            <p>Phone: 01817087419</p>
+            <p>Room: 710, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Mr. Md. Humayun Kabir Biswas</h3>
+            <p>M.Phil (UK), M.Sc (Thailand), B.Sc (Queens University)</p>
+            <p>Assistant Professor</p>
+            <p>Email: mhkbiswas@iubat.edu</p>
+            <p>Phone: 01712593601</p>
+            <p>Room: 424, Ext: 482</p>
+        </div>
+        <div class="card">
+            <h3>Muhammad Riaz Hasib Hossain</h3>
+            <p>MIT (Sydney University, Australia), MIT (Western Sydney University, Australia), B.Sc (IUBAT)</p>
+            <p>Assistant Professor</p>
+            <p>Email: riaz_hasib@iubat.edu</p>
+            <p>Phone: 01949600496</p>
+            <p>Room: 708, Ext: 430</p>
+        </div>
+        <div class="card">
+            <h3>Ehsan Ahmed Niloy</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Lecturer</p>
+            <p>Email: eaniloy.cse@iubat.edu</p>
+            <p>Phone: 01794691569</p>
+            <p>Room: 1013, Ext: 272</p>
+        </div>
+        <div class="card">
+            <h3>Ayesha Khatun</h3>
+            <p>B Tech (India)</p>
+            <p>Senior Lecturer</p>
+            <p>Email: ayesha.siddiqua@iubat.edu</p>
+            <p>Phone: 01794818908</p>
+            <p>Room: 815, Ext: 263</p>
+        </div>
+        <div class="card">
+            <h3>Md. Rownak Ul Islam</h3>
+            <p>BSc (KUET)</p>
+            <p>Lecturer</p>
+            <p>Email: rownak.cse@iubat.edu</p>
+            <p>Phone: 01619903611</p>
+            <p>Room: 817, Ext: Not Provided</p>
+        </div>
+        <div class="card">
+            <h3>Shariful Islam</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Administrative Officer (BCSE)</p>
+            <p>Email: shariful.ao@iubat.edu</p>
+            <p>Phone: 01744865088</p>
+            <p>Room: 419, Ext: 409</p>
+        </div>
+        <div class="card">
+            <h3>Engr. Md Al Mammun Shamrat</h3>
+            <p>BCSE (IUBAT)</p>
+            <p>Administrative Officer</p>
+            <p>Email: shamrat.ao@iubat.edu</p>
+            <p>Phone: 01779213579</p>
+            <p>Room: 419, Ext: 409</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function searchFaculty() {
+    let input = document.getElementById('search').value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "" : "none";
+    });
+}
+</script>
+</body>
+</html>

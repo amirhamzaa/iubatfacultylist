@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>College of Business Administration</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+.search-box {
+    margin-bottom: 20px;
+}
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.faculty-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.card {
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+.card h3 { margin: 0 0 10px; }
+.card p { margin: 5px 0; font-size: 14px; }
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #00ffcc;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.back-btn:hover { background: #00ccaa; }
+</style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="back-btn">⬅ Back</a>
+    <h1>College of Business Administration</h1>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search faculty..." onkeyup="searchFaculty()">
+    </div>
+    <div class="faculty-list" id="facultyList">
+        <!-- Example Faculty Cards -->
+        
+
+
+        <!-- Add rest of CSE faculty here -->
+
+        <div class="faculty-list" id="facultyList">
+
+    <div class="card">
+        <h3>Professor Dr Abdur Rab</h3>
+        <p>Dr O Sc (Belgrade), MBA (Indiana, USA), M Com in Mgt (DU), CMC(Australia)</p>
+        <p>Vice-Chancellor</p>
+        <p>Email: vc@iubat.edu</p>
+        <p>Phone: 0255892471</p>
+        <p>Room: 209, Ext: 215</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Mozaffar Alam Chowdhury</h3>
+        <p>PhD in Finance (UPM, Malaysia), MA in Economics (USA), MBA in Int’l Bus (UK), BBA in Finance (CU)</p>
+        <p>Professor & Dean</p>
+        <p>Email: mchowdhury@iubat.edu</p>
+        <p>Phone: 01783340382</p>
+        <p>Room: 319, Ext: 318</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Hasanuzzaman Tushar</h3>
+        <p>PhD in HROD, NIDA (Thailand), MBA (Bangkok), BBA (IUBAT)</p>
+        <p>Associate Professor & BBA Coordinator</p>
+        <p>Email: tushar@iubat.edu</p>
+        <p>Phone: 01712498009</p>
+        <p>Room: 102, Ext: 172</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Md. Nur-E-Alam Siddique</h3>
+        <p>PhD (UKM, Malaysia), MBA & BBA (RU)</p>
+        <p>Assistant Professor & Coordinator MBA Program</p>
+        <p>Email: alam.cba@iubat.edu</p>
+        <p>Phone: 01799806429</p>
+        <p>Room: 102, Ext: 555</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Khaled Shams Chisty</h3>
+        <p>PhD (Malaysia University), MBA, BBA (CSU, Georgia)</p>
+        <p>Professor</p>
+        <p>Email: chisty@iubat.edu</p>
+        <p>Phone: 01715372253</p>
+        <p>Room: 301, Ext: 151</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Sheikh Shamim Hasnain</h3>
+        <p>PhD Aberystwyth University, UK; MBA UK, MBA IIUC</p>
+        <p>Professor</p>
+        <p>Email: hasnain.cba@iubat.edu</p>
+        <p>Phone: 01948073121</p>
+        <p>Room: 916, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Abdullah Al Yousuf Khan</h3>
+        <p>MBA in Acc & Fin (Dublin, Ireland), PGD (UK), MCom, BCom (DU)</p>
+        <p>Associate Professor</p>
+        <p>Email: aaykhan@iubat.edu</p>
+        <p>Phone: 01841175645</p>
+        <p>Room: 411, Ext: 484</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Arif Rana</h3>
+        <p>PhD (France), MBA (IBA, DU), BSc (DU)</p>
+        <p>Associate Professor</p>
+        <p>Email: arif.cba@iubat.edu</p>
+        <p>Phone: 01552448927</p>
+        <p>Room: 1118, Ext: 369</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Md. Moniruzzaman</h3>
+        <p>PhD (Malaysia), MBA (IBA), M.Com (DU), BCom Hons (DU)</p>
+        <p>Associate Professor</p>
+        <p>Email: moniruzzaman.cba@iubat.edu</p>
+        <p>Phone: 01718782173</p>
+        <p>Room: -, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Swapan Kumar Saha</h3>
+        <p>MA in Accounting (CQU, Australia), BBA in Marketing (EWU, Dhaka)</p>
+        <p>Associate Professor</p>
+        <p>Email: swapan@iubat.edu</p>
+        <p>Phone: 01733445045</p>
+        <p>Room: 518, Ext: 509</p>
+    </div>
+
+    <div class="card">
+        <h3>Mohammed Kamruzzaman</h3>
+        <p>MBA in HRM (UK), BBA (UK)</p>
+        <p>Associate Professor</p>
+        <p>Email: mkamruzzaman@iubat.edu</p>
+        <p>Phone: 01682927493</p>
+        <p>Room: 301, Ext: 240</p>
+    </div>
+
+    <div class="card">
+        <h3>Zahir Rayhan Salim</h3>
+        <p>MBA (UK), BBA (USA), Postgraduate Diploma (UK)</p>
+        <p>Associate Professor</p>
+        <p>Email: zahir.rayhan@iubat.edu</p>
+        <p>Phone: 01705760700</p>
+        <p>Room: 411, Ext: 479</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Md. Sohel Rana</h3>
+        <p>PhD (Malaysia), MBA (RU), BBA (RU)</p>
+        <p>Associate Professor</p>
+        <p>Email: sohelrana.cba@iubat.edu</p>
+        <p>Phone: 01788353875</p>
+        <p>Room: 923, Ext: 347</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Mohammad Moshiur Rahman</h3>
+        <p>PhD (Malaysia), MBA (DU), BBA (Malaysia)</p>
+        <p>Associate Professor</p>
+        <p>Email: moshiur.cba@iubat.edu</p>
+        <p>Phone: 01678115015</p>
+        <p>Room: 923, Ext: 211</p>
+    </div>
+
+    <div class="card">
+        <h3>Kamal Hossain</h3>
+        <p>MIS (Australia), BCom (Australia)</p>
+        <p>Assistant Professor</p>
+        <p>Email: kmlhosn.cba@iubat.edu</p>
+        <p>Phone: 01749505458</p>
+        <p>Room: 514, Ext: 505</p>
+    </div>
+
+    <div class="card">
+        <h3>Jamee Ahmad</h3>
+        <p>MBA in International Management (Australia), BBA in HRM (AIUB, Dhaka)</p>
+        <p>Assistant Professor</p>
+        <p>Email: jamee.ahmad@iubat.edu</p>
+        <p>Phone: 01687028264</p>
+        <p>Room: 815, Ext: 822</p>
+    </div>
+
+    <div class="card">
+        <h3>Kazi Md. Fahim Ahmed</h3>
+        <p>MBA (UK), BA Hons in Business Studies (UK)</p>
+        <p>Assistant Professor</p>
+        <p>Email: kazi.ahmed@iubat.edu</p>
+        <p>Phone: 01796587492</p>
+        <p>Room: 810, Ext: 810</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Md. Shamim Hossain</h3>
+        <p>MSc (Putra Business School, Malaysia), MBA (DU), BBA (DU)</p>
+        <p>Assistant Professor</p>
+        <p>Email: mhossain.bba@iubat.edu</p>
+        <p>Phone: 01531320609</p>
+        <p>Room: 1115, Ext: 366</p>
+    </div>
+
+    <div class="card">
+        <h3>Nayma Iftakhar</h3>
+        <p>MPM (KDI School, South Korea), BBA (IUBAT)</p>
+        <p>Assistant Professor</p>
+        <p>Email: iftakhar.nayma@iubat.edu</p>
+        <p>Phone: 01776670236</p>
+        <p>Room: 1012, Ext: 292</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Md. Afzal Hossain</h3>
+        <p>PhD (China), MBA (DU), BBA (DU)</p>
+        <p>Assistant Professor</p>
+        <p>Email: afzal.cba@iubat.edu</p>
+        <p>Phone: 01831445502</p>
+        <p>Room: 523, Ext: 523</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Sharmin Taskin</h3>
+        <p>PhD (Japan), Masters in Knowledge Science (Japan), MBA (DU), BBA (DU)</p>
+        <p>Assistant Professor</p>
+        <p>Email: dtaskin.cba@iubat.edu</p>
+        <p>Phone: 01727508026</p>
+        <p>Room: 417, Ext: 405</p>
+    </div>
+
+    <div class="card">
+        <h3>Hasan Moudud</h3>
+        <p>MBA (Malaysia), BBA (Malaysia)</p>
+        <p>Assistant Professor</p>
+        <p>Email: hmoudud.cba@iubat.edu</p>
+        <p>Phone: 01645738934</p>
+        <p>Room: 716, Ext: 445</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Mominul Islam</h3>
+        <p>PhD (Universiti Brunei), MSc (Sweden), MBA (RU), BBA (RU)</p>
+        <p>Assistant Professor</p>
+        <p>Email: mominul.cba@iubat.edu</p>
+        <p>Phone: 01711102611</p>
+        <p>Room: 717, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Sunan Islam</h3>
+        <p>MSc (Oxford Brookes, UK), BBA (IUB, Dhaka)</p>
+        <p>Senior Lecturer</p>
+        <p>Email: sunan.islam@iubat.edu</p>
+        <p>Phone: 01811483066</p>
+        <p>Room: 1112, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Kazi Mahmudul Islam</h3>
+        <p>MBA (DU), BSc (USA)</p>
+        <p>Senior Lecturer</p>
+        <p>Email: mahmud.cba@iubat.edu</p>
+        <p>Phone: 01740565659</p>
+        <p>Room: 1016, Ext: 296</p>
+    </div>
+
+    <div class="card">
+        <h3>Ms. Taslima Khatun</h3>
+        <p>MSc (UK), BBA (EWU)</p>
+        <p>Lecturer</p>
+        <p>Email: rumpa.cba@iubat.edu</p>
+        <p>Phone: 01622156320</p>
+        <p>Room: 714, Ext: 448</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Thomas W Garsombke</h3>
+        <p>PhD (Northeastern University, USA), MBA (University of Maine, Orono), BS (Marquette University)</p>
+        <p>Adjunct Faculty</p>
+        <p>Email: tgarsombke@clayton.edu</p>
+        <p>Phone: -</p>
+        <p>Room: -, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Sultan Moyeen Ahmed Robin</h3>
+        <p>MPA (USA), BBA (IUBAT)</p>
+        <p>Semester Faculty</p>
+        <p>Email: smoyeenahmed@gmail.com</p>
+        <p>Phone: 01819251919</p>
+        <p>Room: 214, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Sohel Imroj Sayeed</h3>
+        <p>MBA (Sullivan University, USA), MBA (IUBAT)</p>
+        <p>Semester Faculty</p>
+        <p>Email: sisayeed@gmail.com</p>
+        <p>Phone: 01610002600</p>
+        <p>Room: 214, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Md. Ali Ahsan</h3>
+        <p>PhD (UNIMAS, Malaysia), MSS (RU), BSS Honors (RU)</p>
+        <p>Semester Faculty</p>
+        <p>Email: aliahsan.rubd@gmail.com</p>
+        <p>Phone: 01716303292</p>
+        <p>Room: 214, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Drs. Md. Aynul Hoque</h3>
+        <p>PhD (Asia Europe Institute, Universiti Malaya), MBA (Ritsumeikan Asia Pacific University, Japan), MBA (IBA, DU), BSc (BUET)</p>
+        <p>Semester Faculty</p>
+        <p>Email: aynulsae@gmail.com</p>
+        <p>Phone: 01911291223</p>
+        <p>Room: 214, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Rubel</h3>
+        <p>PhD (Chandigarh University, India), MBA (BOU), MSS (CU), BSS (CU)</p>
+        <p>Semester Faculty</p>
+        <p>Email: rubelamincu@gmail.com</p>
+        <p>Phone: 01713510024</p>
+        <p>Room: 214, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Dr. Md. Imtiaz Mostafiz</h3>
+        <p>PhD (Malaysia)</p>
+        <p>Adjunct Research Fellow</p>
+        <p>Email: -</p>
+        <p>Phone: -</p>
+        <p>Room: -, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Mohammad Fakhrul Islam</h3>
+        <p>Hungarian University of Agriculture & Life Sciences (MATE), MBA (RU), BBA (RU)</p>
+        <p>Adjunct Research Associate</p>
+        <p>Email: fakhrul.mate.hu@gmail.com</p>
+        <p>Phone: -</p>
+        <p>Room: -, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Shaikh Sabbir Ahmed Waliullah</h3>
+        <p>MBA in Finance (UK), BBA in Finance & Banking (RU)</p>
+        <p>Assistant Professor</p>
+        <p>Email: shaikh.waliullah@iubat.edu</p>
+        <p>Phone: 01947516662</p>
+        <p>Room: -, Ext: -</p>
+    </div>
+
+    <div class="card">
+        <h3>Arif Ahsan</h3>
+        <p>MBA in Marketing (UK), BBA in Acc & Finance (AIUB, Dhaka)</p>
+        <p>Assistant Professor</p>
+        <p>Email: arif.ahsan@iubat.edu</p>
+        <p>Phone: 01837411533</p>
+        <p>Room: 811, Ext: 7071</p>
+    </div>
+
+    <div class="card">
+        <h3>Mr. Hasibul Islam Russell</h3>
+        <p>MSc (UK), MBA (UK), BSc (UK)</p>
+        <p>Senior Lecturer</p>
+        <p>Email: hasibul.russell@iubat.edu</p>
+        <p>Phone: 01917009927</p>
+        <p>Room: 715, Ext: 437</p>
+    </div>
+
+    <div class="card">
+        <h3>Md. Sadman Sakib</h3>
+        <p>BSc in IPE (BUET)</p>
+        <p>Lecturer</p>
+        <p>Email: sadman.sakib@iubat.edu</p>
+        <p>Phone: 01964250450</p>
+        <p>Room: 519, Ext: 513</p>
+    </div>
+
+    <div class="card">
+        <h3>Reefat Arefin Khan</h3>
+        <p>MBA (Malaysia), BSc (UK)</p>
+        <p>Senior Lecturer</p>
+        <p>Email: reefat.arefin@iubat.edu</p>
+        <p>Phone: 01613051013</p>
+        <p>Room: 716, Ext: 430</p>
+    </div>
+
+    <div class="card">
+        <h3>Sampa Halder</h3>
+        <p>BSc in IPE (BUET)</p>
+        <p>Lecturer</p>
+        <p>Email: sampahldr.cba@iubat.edu</p>
+        <p>Phone: 01923141587</p>
+        <p>Room: 710, Ext: 153</p>
+    </div>
+
+    <div class="card">
+        <h3>Md Ariful Islam</h3>
+        <p>MSS (JU), BA Econ (IUBAT)</p>
+        <p>Administrative Officer (CBA)</p>
+        <p>Email: ariful.islam@iubat.edu</p>
+        <p>Phone: 01811324874</p>
+        <p>Room: 102, Ext: 180</p>
+    </div>
+
+    <div class="card">
+        <h3>Mohammad Shahin</h3>
+        <p>MBA (IUBAT), BBA (IUBAT)</p>
+        <p>Administrative Officer (MBA)</p>
+        <p>Email: shahin.ao@iubat.edu</p>
+        <p>Phone: 01886068116</p>
+        <p>Room: 102, Ext: 180</p>
+    </div>
+
+</div>
+
+
+
+
+    </div>
+</div>
+
+<script>
+function searchFaculty() {
+    let input = document.getElementById('search').value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "" : "none";
+    });
+}
+</script>
+</body>
+</html>

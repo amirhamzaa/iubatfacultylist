@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IUBAT Home</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    width: 20%;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #00ffcc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sidebar button:hover {
+    background: #00ccaa;
+}
+.main {
+    flex: 1;
+    padding: 30px;
+}
+.cgpa-box {
+    max-width: 500px;
+    margin: auto;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffcc;
+}
+label { display: block; margin-top: 10px; }
+input[type="number"] {
+    width: 100%; padding: 8px; margin-top: 5px; border: none; border-radius: 5px;
+}
+button.calc-btn {
+    width: 100%; margin-top: 20px; padding: 10px;
+    border: none; border-radius: 10px;
+    background: #00ffcc; color: black; font-weight: bold;
+}
+button.calc-btn:hover { background: #00ccaa; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+        <h3>Departments</h3>
+        <button onclick="window.location.href='dept_agriculture.html'">Agriculture</button>
+        <button onclick="window.location.href='dept_economics.html'">Economics</button>
+        <button onclick="window.location.href='dept_tourism.html'">Tourism & Hospitality</button>
+        <button onclick="window.location.href='dept_nursing.html'">Nursing</button>
+        <button onclick="window.location.href='dept_business.html'">Business</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <div class="cgpa-box">
+            <h2 style="text-align:center">IUBAT CGPA Calculator</h2>
+            <label>Mid Term</label>
+            <input type="number" id="mid" placeholder="0-100">
+            <label>Class Test</label>
+            <input type="number" id="test" placeholder="0-100">
+            <label>Assignment</label>
+            <input type="number" id="assign" placeholder="0-100">
+            <label>Presentation</label>
+            <input type="number" id="pres" placeholder="0-100">
+            <label>Attendance</label>
+            <input type="number" id="attend" placeholder="0-100">
+            <label>Final Exam</label>
+            <input type="number" id="final" placeholder="0-100">
+            <button class="calc-btn" onclick="calculate()">Submit</button>
+        </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar">
+        <h3>Departments</h3>
+        <button onclick="window.location.href='dept_cse.html'">CSE</button>
+        <button onclick="window.location.href='dept_ce.html'">Civil Engineering</button>
+        <button onclick="window.location.href='dept_eee.html'">EEE</button>
+        <button onclick="window.location.href='dept_me.html'">Mechanical Engineering</button>
+    </div>
+</div>
+
+<script>
+function percentageToGrade(p) {
+    if (p >= 80) return {gp: 4.0, letter: 'A+'};
+    if (p >= 75) return {gp: 3.75, letter: 'A'};
+    if (p >= 70) return {gp: 3.5, letter: 'A-'};
+    if (p >= 65) return {gp: 3.25, letter: 'B+'};
+    if (p >= 60) return {gp: 3.0, letter: 'B'};
+    if (p >= 55) return {gp: 2.75, letter: 'B-'};
+    if (p >= 50) return {gp: 2.5, letter: 'C+'};
+    if (p >= 45) return {gp: 2.25, letter: 'C'};
+    if (p >= 40) return {gp: 2.0, letter: 'D'};
+    return {gp: 0.0, letter: 'F'};
+}
+
+function calculate() {
+    let mid = +document.getElementById('mid').value || 0;
+    let test = +document.getElementById('test').value || 0;
+    let assign = +document.getElementById('assign').value || 0;
+    let pres = +document.getElementById('pres').value || 0;
+    let attend = +document.getElementById('attend').value || 0;
+    let finalExam = +document.getElementById('final').value || 0;
+
+    let total = mid*0.25 + test*0.10 + assign*0.10 + pres*0.10 + attend*0.05 + finalExam*0.40;
+    let res = percentageToGrade(total);
+
+    // Redirect to result page
+    let url = `result.html?percentage=${total.toFixed(2)}&letter=${res.letter}&gp=${res.gp.toFixed(2)}`;
+    window.location.href = url;
+}
+</script>
+</body>
+</html>

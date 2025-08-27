@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Result</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #2c3e50, #4ca1af);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .result-box {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 0 20px #00ffcc;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .back-btn {
+        margin-top: 20px;
+        background: #00ffcc;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="result-box">
+    <h2>Your CGPA is</h2>
+    <p id="percentage"></p>
+    <p id="letter"></p>
+    <p id="gp"></p>
+    <p id="message"></p>
+    <button class="back-btn" onclick="goBack()">Back</button>
+</div>
+
+<script>
+function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        percentage: params.get('percentage'),
+        letter: params.get('letter'),
+        gp: params.get('gp')
+    };
+}
+
+function displayResult() {
+    const { percentage, letter, gp } = getQueryParams();
+    document.getElementById('percentage').textContent = `Final Percentage: ${percentage}%`;
+    document.getElementById('letter').textContent = `Grade: ${letter}`;
+    document.getElementById('gp').textContent = `Grade Point: ${gp}`;
+    
+    if (letter === 'F') {
+        document.getElementById('message').textContent = "I hope things go better for you next time.";
+    }
+}
+
+function goBack() {
+    window.location.href = "index.html";
+}
+
+displayResult();
+</script>
+</body>
+</html>

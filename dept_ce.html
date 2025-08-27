@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CSC Department</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+.search-box {
+    margin-bottom: 20px;
+}
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.faculty-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.card {
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+.card h3 { margin: 0 0 10px; }
+.card p { margin: 5px 0; font-size: 14px; }
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #00ffcc;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.back-btn:hover { background: #00ccaa; }
+</style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="back-btn">⬅ Back</a>
+    <h1>CSC Department Faculty</h1>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search faculty..." onkeyup="searchFaculty()">
+    </div>
+    <div class="faculty-list" id="facultyList">
+        <!-- Example Faculty Cards -->
+        <div class="card">
+            <h3>Dr Utpal Kanti Das</h3>
+            <p>Professor & Chair</p>
+            <p>Email: ukd@iubat.edu</p>
+            <p>Phone: 01819199419</p>
+            <p>Room: 420, Ext: 419</p>
+        </div>
+        <div class="card">
+            <h3>Dr Abhijit Saha</h3>
+            <p>Professor & Coordinator of Master's Program</p>
+            <p>Email: asaha@iubat.edu</p>
+            <p>Phone: 01711201907</p>
+            <p>Room: 614, Ext: 615</p>
+        </div>
+        <!-- Add rest of CSE faculty here -->
+    </div>
+</div>
+
+<script>
+function searchFaculty() {
+    let input = document.getElementById('search').value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "" : "none";
+    });
+}
+</script>
+</body>
+</html>
